@@ -1,0 +1,42 @@
+body {
+  height: 100vh;
+  text-align: center;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.input {
+  margin: 50px auto;
+  height: 30px;
+  font-size: 20px;
+  outline: none;
+  border: solid 1px indigo;
+}
+img {
+  margin-left: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0%;
+}
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: inline-flex;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.5;
+}
+.country-list-item {
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.5;
+}
