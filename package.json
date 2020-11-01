@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IlyaLitvin/goit-js-hw-12-countries"
+    "url": "https://github.com/IlyaLitvin/goit-js-hw-12-countries.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IlyaLitvin/goit-js-hw-12-countries"
+    "url": "https://github.com/IlyaLitvin/goit-js-hw-12-countries.git"
   },
   "homepage": "https://github.com/IlyaLitvin/goit-js-hw-12-countries.git",
   "devDependencies": {
