@@ -9,7 +9,7 @@ export default function fetchConutries(serachQuery) {
   const debounce = require("lodash.debounce");
 
   const findCountries = function (e) {
-    if (e.target.value.length >= 1) {
+    if (e.target.value.length >= 3) {
       fetch(`https://restcountries.eu/rest/v2/name/${e.target.value}`)
         .then((data) => data.json())
         .then((array) => {
@@ -22,7 +22,7 @@ export default function fetchConutries(serachQuery) {
           }
           array.forEach((el) => {
             if (array.length >= 2 && array.length < 10) {
-              containerList.innerHTML += `<li class=country-list-item>${el.name}</li>`;
+              containerList.innerHTML += `<li class="country-list-item">${el.name}</li>`;
               const items = document.querySelectorAll(".country-list-item");
               items.forEach((el) => {
                 const clearListItems = function () {
@@ -37,12 +37,14 @@ export default function fetchConutries(serachQuery) {
                         "beforeend",
                         template(array),
                       );
+                      localStorage.setItem("html", template(array));
                     });
                 };
                 el.addEventListener("click", clearListItems);
               });
             } else if (array.length === 1) {
               containerList.insertAdjacentHTML("beforeend", template(array));
+              localStorage.setItem("html", template(array));
             }
           });
         })
@@ -59,6 +61,6 @@ export default function fetchConutries(serachQuery) {
     "input",
     debounce((e) => {
       findCountries(e);
-    }, 500),
+    }, 1000),
   );
 }
